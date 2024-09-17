@@ -6,27 +6,34 @@ import Link from "../components/Link.astro";
 ---
 
 <MainLayout title="Titel">
-  <article>
+  <article class="poppins-regular">
     <section class="hero_unit">
       <img
-        class=""
+        class="bg-no-repeat bg-center bg-cover h-screen"
         src="/src/assets/images/SVG/hero.svg"
         alt="billede af skrald fra computer der bliver smidt ud"
       />
-      <h1 class="">Din digitale oprydning starter her!</h1>
+
+      <h1 class="poppins-regular">Din digitale oprydning starter her!</h1>
       <Buttonmobile>Meld dig til nu!</Buttonmobile>
     </section>
-    <section class="sektion_1 bg-">
-      <section>
-        <p>Påmindelse</p>
-        <p>15 marts 2025</p>
-        <Buttonmobile>Gem datoen</Buttonmobile>
-        <Buttonmobile>Del med venner</Buttonmobile>
+    <section class="sektion_1 bg-rødorange p-12">
+      <section class="bg-white m-10 p-8 text-center rounded-xl">
+        <p class="text-mørkeblåtekst text-xl">Påmindelse</p>
+        <p class="text-mørkerød text-4xl py-2 pb-4">15 marts 2025</p>
+        <div class="p-2">
+          <Buttonmobile>Gem datoen</Buttonmobile>
+        </div>
+        <div class="p-2">
+          <Buttonmobile>Del med venner</Buttonmobile>
+        </div>
       </section>
       <section>
         <img src="" alt="" />
-        <h2>Hvad er digitalt skrald?</h2>
-        <p>
+        <h2 class="text-mørkerødtekst text-center text-3xl pb-6">
+          Hvad er digitalt skrald?
+        </h2>
+        <p class="text-mørkerødtekst">
           Digitalt skrald er unødvendige data som gamle e-mails, filer og apps,
           der optager plads og kræver energi til lagring. Det bidrager til
           CO2-udledning, og ved at slette disse data kan vi reducere
@@ -34,9 +41,11 @@ import Link from "../components/Link.astro";
         </p>
       </section>
     </section>
-    <section class="sektion_2">
-      <h2>Problemet med digitalt skrald</h2>
-      <p>
+    <section class="sektion_2 bg-lyseblå p-12">
+      <h2 class="text-mørkeblåtekst text-center text-3xl pb-6">
+        Problemet med digitalt skrald
+      </h2>
+      <p class="text-mørkeblåtekst">
         Digitalt skrald er skjult forurening, der bruger energi, selv når filer
         og apps ikke er i brug. Det gør vores enheder langsommere og belaster
         miljøet. <br />
@@ -49,69 +58,95 @@ import Link from "../components/Link.astro";
         Der er brug for hjælp til at komme af med digitalt skrald. Hjælp
         allerede til i dag!
       </p>
-      <Buttonmobile>Meld dig til nu!</Buttonmobile>
+      <div class="text-center">
+        <Buttonmobile>Meld dig til nu!</Buttonmobile>
+      </div>
     </section>
-    <section class="sektion_3">
-      <h2>Vidste du?</h2>
-      <ul>
-        <li>
+    <section class="sektion_3 bg-rødorange p-12">
+      <h2 class="text-mørkerødtekst text-center text-3xl pb-6">Vidste du?</h2>
+      <ul class="list-disc pb-10">
+        <li class="py-4">
           Det kræver mere energi at udvinde Bitcoin end det samlede
           energiforbrug i hele New Zealand på et år! (a), (b)
         </li>
-        <li>
+        <li class="py-2">
           På blot ét år (2007) blev der skabt en zettabyte data verden over. I
           2010 var dette fordoblet. I 2035 vil vi skabe mere end 2.000
           zettabytes. For at udskrive én zettabyte data ville man skulle bruge
           papir fra 20 billioner træer. Der er kun omkring 3,5 billioner træer
           tilbage på planeten, så det er ikke muligt. (a), (b)
         </li>
-        <li>
+        <li class="py-2">
           I 2022 blev der brugt omkring 70 millioner servere til at lagre data.
           Hver af dem forårsagede produktionen af 1-2 tons CO2. Det år blev
           omkring 20 millioner af dem til elektronikaffald. (a)
         </li>
-        <li>99% af data er skabt inden for de sidste 10 år. (a)</li>
-        <li>
+        <li class="py-2">
+          99% af data er skabt inden for de sidste 10 år. (a)
+        </li>
+        <li class="py-2">
           Den ubegrænsede datakonsumtion i dag kræver 3 gange mere energi end
           alle solpaneler i verden kan producere! (a)
         </li>
-        <li>
+        <li class="py-2">
           Internettet producerer mere end 900 millioner tons CO2 hvert år! (a),
           (b), (c), (d)
         </li>
-        <li>
+        <li class="py-2">
           90% af alle data bliver aldrig tilgået igen tre måneder efter det er
           gemt. (a)
         </li>
-        <li>91% af websider får ingen trafik fra Google. (a)</li>
-        <li>
+        <li class="py-2">91% af websider får ingen trafik fra Google. (a)</li>
+        <li class="py-2">
           320 milliarder e-mails bliver sendt hver dag, og 62 billioner
           spammails hvert år = 20 millioner tons CO2! (a), (b)
         </li>
-        <li>
+        <li class="py-2">
           En e-mail udleder i gennemsnit 4 g CO2 = klimaaftrykket af en lyspære,
           der er tændt i 6 minutter! (a), (b), (c)
         </li>
       </ul>
-      <p>Kilder:</p>
-      <a href="https://www.iea.org/">(a) International Energy Agency;</a>
-      <a
-        href="https://www.energetics.com.au/insights/thought-leadership/bitcoin-tracking-to-consume-more-energy-than-nz"
-        >"(b) Bitcoin Tracking To Consume More Energy Than NZ" - Energetics;</a
-      >
-      <a href="https://www.webfx.com/blog/marketing/carbon-footprint-internet/"
-        >(c) Powering the Internet: Your Virtual Carbon Footprint - WebFX;</a
-      >
-      <a
-        href="https://www.energuide.be/en/questions-answers/do-i-emit-co2-when-i-surf-the-internet/69/#:~:text=In%20concrete%20terms%2C%20this%20represents,emitted%20per%20inhabitant%20each%20year"
-        >(d) Energuide.be;</a
-      >
-      <a
-        href="https://www.demandsage.com/big-data-statistics/#:~:text=120%20zettabytes%20of%20data%20was,compared%20to%20the%20previous%20year."
-        >(e) Demandsage;</a
-      >
+      <p class="text-blå700">Kilder:</p>
+      <p class="text-mørkerød">
+        (a)<a href="https://www.iea.org/" class="text-blå700">
+          International Energy Agency;</a
+        >
+      </p>
+
+      <p class="text-mørkerød">
+        (b)<a
+          href="https://www.energetics.com.au/insights/thought-leadership/bitcoin-tracking-to-consume-more-energy-than-nz"
+          class="text-blå700"
+          >"Bitcoin Tracking To Consume More Energy Than NZ" - Energetics;</a
+        >
+      </p>
+      <p class="text-mørkerød">
+        (c)<a
+          href="https://www.webfx.com/blog/marketing/carbon-footprint-internet/"
+          class="text-blå700"
+        >
+          Powering the Internet: Your Virtual Carbon Footprint - WebFX;</a
+        >
+      </p>
+      <p class="text-mørkerød">
+        (d) <a
+          href="https://www.energuide.be/en/questions-answers/do-i-emit-co2-when-i-surf-the-internet/69/#:~:text=In%20concrete%20terms%2C%20this%20represents,emitted%20per%20inhabitant%20each%20year"
+          class="text-blå700"
+        >
+          Energuide.be;</a
+        >
+      </p>
+
+      <p class="text-mørkerød">
+        (e) <a
+          href="https://www.demandsage.com/big-data-statistics/#:~:text=120%20zettabytes%20of%20data%20was,compared%20to%20the%20previous%20year."
+          class="text-blå700"
+        >
+          Demandsage;</a
+        >
+      </p>
     </section>
-    <section class="sektion_4">
+    <section class="sektion_4 bg-blå800 text-white">
       <p>
         Der er brug for hjælp til at komme af med digitalt skrald. Hjælp
         allerede til i dag!
