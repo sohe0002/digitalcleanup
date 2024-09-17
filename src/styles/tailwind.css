@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base{
+@layer base {
+}
 
+@layer utilities {
+  .poppins-regular {
+    @apply font-poppins font-regular;
+  }
+
+  .poppins-bold {
+    @apply font-poppins font-bold;
+  }
 }
