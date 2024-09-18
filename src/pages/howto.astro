@@ -7,104 +7,232 @@ import Link from "../components/Link.astro";
 
 <MainLayout>
   <section class="bg-blå800">
-    <h1 class="text-rødorange text-center">Sådan deltager du</h1>
+    <h1
+      class="text-lyseblå text-center text-3xl pt-8 poppins-regular md:text-5xl"
+    >
+      Sådan deltager du
+    </h1>
+    <div class="grid justify-items-center py-8">
+      <img
+        src="/src/assets/images/SVG/howto.svg"
+        alt="billede af en der smider filer på sin computer ud"
+        class="w-72 h-auto md:w-96"
+      />
+    </div>
 
-    <img
-      src="/src/assets/images/SVG/howto.svg"
-      alt="billede af en der smider filer på sin computer ud"
-    />
+    <div class="grid md:grid-cols-2 md:gap-2">
+      <div
+        class="grid justify-items-center pb-3 poppins-regular md:justify-end md:mr-px"
+      >
+        <Buttonmobile>
+          <img
+            src="/src/assets/images/SVG/mobileicon.svg"
+            alt="mobil icon"
+            class="w-6 h-6"
+          />
+          <span>Ryd op på din smartphone</span>
+        </Buttonmobile>
+      </div>
 
-    <div>
-      <Buttonmobile>Ryd op på din smartphone</Buttonmobile>
-    </div>
-    <div>
-      <Buttonmobile>Ryd op på din computers harddisk</Buttonmobile>
-    </div>
-    <div>
-      <Buttonmobile>Ryd op på din indbakke</Buttonmobile>
-    </div>
-    <div>
-      <Buttonmobile>Lav nye arrangementer</Buttonmobile>
+      <div
+        class="grid justify-items-center pb-3 poppins-regular md:justify-start md:ml-px"
+      >
+        <Buttonmobile>
+          <img
+            src="/src/assets/images/SVG/computericon.svg"
+            alt="computer icon"
+            class="w-6 h-6"
+          />
+          <span>Ryd op på din computers harddisk</span>
+        </Buttonmobile>
+      </div>
+
+      <div
+        class="grid justify-items-center pb-3 poppins-regular md:justify-end md:mr-px"
+      >
+        <Buttonmobile>
+          <img
+            src="/src/assets/images/SVG/mailicon.svg"
+            alt="mail icon"
+            class="w-6 h-6"
+          />
+          <span>Ryd op på din indbakke</span>
+        </Buttonmobile>
+      </div>
+
+      <div
+        class="grid justify-items-center pb-10 poppins-regular md:justify-start md:ml-px"
+      >
+        <Buttonmobile>
+          <img
+            src="/src/assets/images/SVG/arrangementicon.svg"
+            alt="arrangement icon"
+            class="w-6 h-6"
+          />
+          <span>Lav nye arrangementer</span>
+        </Buttonmobile>
+      </div>
     </div>
   </section>
 
   <section class="bg-lyseblå">
-    <h2 class="text-mørkeblåtekst text-center pt-12">1. Trin</h2>
-    <h3 class="poppins-bold text-mørkeblåtekst text-center py-4">
+    <h2
+      class="text-mørkeblåtekst text-center pt-12 text-3xl poppins-regular md:text-4xl"
+    >
+      1. Trin
+    </h2>
+    <h3 class="poppins-regular text-mørkeblåtekst text-center py-4 md:text-xl">
       Ryd op i din smartphone
     </h3>
-    <img src="/src/assets/images/SVG/art1trin.svg" alt="billede af mobil" />
-    <p class="text-mørkeblåtekst py-6">
-      Fjern alle apps, som du ikke har brugt i et stykke tid, eller kun har
-      brugt et par gange. Vær ærlig og modig! Slet alle de unødvendige, glemte,
-      gamle apps og spil, som du har downloadet, men endnu ikke rigtig prøvet.
-      Sandsynligheden er, at du heller ikke pludselig vil begynde at bruge dem
-      senere! De bruger energi, selv når de ikke er i brug, og kan forbruge
-      hundredvis af megabytes ved månedlige opdateringer. Husk at slette
-      eventuelle brugerkonti (inklusive e-mails) og tilhørende data, som du
-      oprettede, da du var 15, og som du ikke har tilgået i et årti eller mere!
-      Du vil gøre din telefon hurtigere og forlænge batterilevetiden. Det er
-      altid værd at have så få apps som nødvendigt. Gennemgå dine billeder og
-      videoer. Ved at slette de unødvendige samt eventuelle dubletter kan du
-      frigøre mange gigabytes af værdifuld lagerplads. Se vejledningen om,
-      hvordan du rydder op på din smartphone og tablet.
-    </p>
+
+    <div class="md:grid md:grid-cols-3 gap-4">
+      <div class="col-span-1 grid justify-center md:pt-16">
+        <img
+          src="/src/assets/images/SVG/art1trin.svg"
+          alt="billede af mobil"
+          class="max-w-full h-auto"
+        />
+      </div>
+      <div
+        class="col-span-2 py-6 px-14 pb-10 text-mørkeblåtekst poppins-regular leading-8"
+      >
+        Fjern alle apps, som du ikke har brugt i et stykke tid, eller kun har
+        brugt et par gange. Vær ærlig og modig! Slet alle de unødvendige,
+        glemte, gamle apps og spil, som du har downloadet, men endnu ikke rigtig
+        prøvet. Sandsynligheden er, at du heller ikke pludselig vil begynde at
+        bruge dem senere! De bruger energi, selv når de ikke er i brug, og kan
+        forbruge hundredvis af megabytes ved månedlige opdateringer. Husk at
+        slette eventuelle brugerkonti (inklusive e-mails) og tilhørende data,
+        som du oprettede, da du var 15, og som du ikke har tilgået i et årti
+        eller mere! Du vil gøre din telefon hurtigere og forlænge
+        batterilevetiden. Det er altid værd at have så få apps som nødvendigt.
+        Gennemgå dine billeder og videoer. Ved at slette de unødvendige samt
+        eventuelle dubletter kan du frigøre mange gigabytes af værdifuld
+        lagerplads. Se <a
+          class="text-mørkerød underline"
+          href="https://drive.google.com/file/d/1fN0bgV8R1WAirubd_1QlSH17lYHt6eE_/view"
+          >vejledningen</a
+        > om, hvordan du rydder op på din smartphone og tablet.
+      </div>
+    </div>
   </section>
 
   <section class="bg-rødorange">
-    <h2 class="text-mørkerødtekst text-center pt-12">2. Trin</h2>
-    <h3 class="text-mørkerødtekst text-center py-4">
+    <h2
+      class="text-mørkerødtekst text-center pt-12 text-3xl poppins-regular md:text-4xl"
+    >
+      2. Trin
+    </h2>
+    <h3 class="text-mørkerødtekst text-center py-4 poppins-regular md:text-xl">
       Ryd op i din computers harddisk
     </h3>
-    <img src="/src/assets/images/SVG/art2trin.svg" alt="billede af computer" />
-    <p class="text-mørkerødtekst py-6">
-      Gennemgå din personlige computer og slet filer, der er dubletter eller er
-      blevet unyttige. Gå igennem alle dine billeder og slet dubletter og
-      slørede billeder. Tjek videofiler og slet dem, du har set, eller som er
-      unødvendige. Arkiver de vigtige filer. Vær forberedt på at finde virkelig
-      spændende ting på din computer! Se vejledningen om, hvordan du rydder op
-      på din computer og harddisk.
-    </p>
+
+    <div class="md:grid md:grid-cols-3 gap-4">
+      <div
+        class="col-span-1 grid justify-items-center md:order-2 pb-4 md:pb-10"
+      >
+        <img
+          src="/src/assets/images/SVG/art2trin.svg"
+          alt="billede af computer"
+        />
+      </div>
+      <p
+        class="col-span-2 text-mørkerødtekst py-6 px-14 pb-10 poppins-regular leading-8"
+      >
+        Gennemgå din personlige computer og slet filer, der er dubletter eller
+        er blevet unyttige. Gå igennem alle dine billeder og slet dubletter og
+        slørede billeder. Tjek videofiler og slet dem, du har set, eller som er
+        unødvendige. Arkiver de vigtige filer. Vær forberedt på at finde
+        virkelig spændende ting på din computer! Se <a
+          class="text-mørkerød underline"
+          href="https://drive.google.com/file/d/1i8rKagvbCXk4JciaEg896YUUti3bjLbU/view"
+          >vejledningen</a
+        > om, hvordan du rydder op på din computer og harddisk.
+      </p>
+    </div>
   </section>
 
   <section class="bg-lyseblå">
-    <h2 class="text-mørkeblåtekst text-center pt-12">3. Trin</h2>
-    <h3 class="text-mørkeblåtekst text-center py-4">Ryd op i din indbakke</h3>
-    <img src="/src/assets/images/SVG/art3trin.svg" alt="billede af mail" />
-    <p class="mørkeblåtekst py-6">
-      Sorter e-mails efter de ældste og arkivér dem. Afmeld dig fra nyhedsbreve,
-      som du alligevel ikke læser. Vælg lange samtaler, behold den nyeste, og
-      slet resten! Søg efter almindelige navne, adresser og ord for at finde
-      lignende e-mails, så du kan håndtere dem samlet. Vær modig og tryk på
-      slet-knappen. Se vejledningen om, hvordan du rydder op i din indbakke!
-    </p>
+    <h2
+      class="text-mørkeblåtekst text-center pt-12 text-3xl poppins-regular md:text-4xl"
+    >
+      3. Trin
+    </h2>
+    <h3 class="text-mørkeblåtekst text-center py-4 poppins-regular md:text-xl">
+      Ryd op i din indbakke
+    </h3>
+
+    <div class="md:grid md:grid-cols-3 gap-4">
+      <div class="col-span-1 grid justify-items-center md:pb-12">
+        <img src="/src/assets/images/SVG/art3trin.svg" alt="billede af mail" />
+      </div>
+      <p
+        class="col-span-2 text-mørkeblåtekst py-6 px-14 pb-10 poppins-regular leading-8"
+      >
+        Sorter e-mails efter de ældste og arkivér dem. Afmeld dig fra
+        nyhedsbreve, som du alligevel ikke læser. Vælg lange samtaler, behold
+        den nyeste, og slet resten! Søg efter almindelige navne, adresser og ord
+        for at finde lignende e-mails, så du kan håndtere dem samlet. Vær modig
+        og tryk på slet-knappen. Se <a
+          class="text-mørkerød underline"
+          href="https://drive.google.com/file/d/1Capnwt-idzQoVtV1jNTM2HeJnvYVNQIi/view"
+          >vejledningen</a
+        > om, hvordan du rydder op i din indbakke!
+      </p>
+    </div>
   </section>
 
   <section class="bg-rødorange">
-    <h2 class="text-mørkerødtekst text-center pt-12">4. Trin</h2>
-    <h3 class="text-mørkerødtekst text-center py-4">Lav nye arrangementer</h3>
-    <img
-      src="/src/assets/images/SVG/art4trin.svg"
-      alt="billede af arrangement"
-    />
-    <p class="text-mørkerødtekst py-6">
-      Brug flere co-working steder i stedet for at sende e-mails. Stop med at
-      sende 'ok' og 'tak' e-mails! Opbevar de vigtige filer ét sted i skyen, så
-      du ikke behøver at have de samme filer på hver computer. Tænk først, før
-      du laver sikkerhedskopier. Skab mindre 'hurtigt indhold' og vær mere
-      bevidst om dine videoer og billeder. Sørg for kun at lave sikkerhedskopier
-      af de filer, du virkelig har brug for, og kun de billeder, du elsker. Små
-      ændringer i dine internetvaner, som at slukke for video under et virtuelt
-      møde, reducere kvaliteten af streamingtjenester, mindske spilletid,
-      begrænse tid på sociale medier og afmelde dig nyhedsbreve og
-      e-mail-lister, kan betydeligt reducere dit miljøaftryk!
-    </p>
+    <h2
+      class="text-mørkerødtekst text-center pt-12 text-3xl poppins-regular md:text-4xl"
+    >
+      4. Trin
+    </h2>
+    <h3 class="text-mørkerødtekst text-center py-4 poppins-regular md:text-xl">
+      Lav nye arrangementer
+    </h3>
+
+    <div class="md:grid md:grid-cols-3 gap-4">
+      <div
+        class="col-span-1 grid justify-items-center md:order-2 pb-4 md:pt-12 md:pb-10"
+      >
+        <img
+          src="/src/assets/images/SVG/art4trin.svg"
+          alt="billede af arrangement"
+        />
+      </div>
+      <p
+        class="col-span-2 text-mørkerødtekst py-8 px-14 pb-10 poppins-regular leading-8"
+      >
+        Brug flere co-working steder i stedet for at sende e-mails. Stop med at
+        sende 'ok' og 'tak' e-mails! Opbevar de vigtige filer ét sted i skyen,
+        så du ikke behøver at have de samme filer på hver computer. Tænk først,
+        før du laver sikkerhedskopier. Skab mindre 'hurtigt indhold' og vær mere
+        bevidst om dine videoer og billeder. Sørg for kun at lave
+        sikkerhedskopier af de filer, du virkelig har brug for, og kun de
+        billeder, du elsker. Små ændringer i dine internetvaner, som at slukke
+        for video under et virtuelt møde, reducere kvaliteten af
+        streamingtjenester, mindske spilletid, begrænse tid på sociale medier og
+        afmelde dig nyhedsbreve og e-mail-lister, kan betydeligt reducere dit
+        miljøaftryk!
+      </p>
+    </div>
   </section>
 
   <section class="bg-blå800">
-    <h3 class="text-center py-8">Vær kreativ og lev let!</h3>
-    <div class="pb-4">
-      <Buttonmobile>Del dine resultater</Buttonmobile>
+    <h3 class="text-center py-8 text-white poppins-regular">
+      Vær kreativ og lev let!
+    </h3>
+
+    <div class="grid justify-items-center pb-10 poppins-regular">
+      <Buttonmobile>
+        <span>Del dine resultater</span>
+        <img
+          src="/src/assets/images/SVG/pilicon.svg"
+          alt="arrangement icon"
+          class="w-6 h-6"
+        />
+      </Buttonmobile>
     </div>
   </section>
 </MainLayout>
