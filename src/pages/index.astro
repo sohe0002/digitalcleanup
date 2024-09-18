@@ -36,16 +36,22 @@ import Link from "../components/Link.astro";
         </p>
         <div class="lg:flex lg:justify-center lg:py-6">
           <div class="p-2 lg:text-xl lg:mx-4">
-            <Buttonmobile>Gem datoen</Buttonmobile>
+            <Buttonmobile>
+              <img src="/src/assets/images/SVG/kalender.svg" alt="gem datoen" />
+              <span>Gem datoen</span>
+            </Buttonmobile>
           </div>
           <div class="p-2 lg:text-xl lg:mx-4">
-            <Buttonmobile>Del med venner</Buttonmobile>
+            <Buttonmobile>
+              <img src="/src/assets/images/SVG/del.svg" alt="del med venner" />
+              <span>Del med venner</span>
+            </Buttonmobile>
           </div>
         </div>
       </section>
       <section>
         <img
-          class="size:1/5 pt-10 lg:size-3/5 lg:grid lg:place-items-center"
+          class="size:1/5 pt-10 lg:size-3/5 lg:grid lg:mx-auto"
           src="/src/assets/images/hvader_digitalskrald.svg"
           alt=""
         />
@@ -54,7 +60,9 @@ import Link from "../components/Link.astro";
         >
           Hvad er digitalt skrald?
         </h2>
-        <p class="text-mørkerødtekst lg:w-1/2 lg:mx-44">
+        <p
+          class="text-mørkerødtekst lg:w-1/2 lg:mx-44 poppins-regular leading-8"
+        >
           Digitalt skrald er unødvendige data som gamle e-mails, filer og apps,
           der optager plads og kræver energi til lagring. Det bidrager til
           CO2-udledning, og ved at slette disse data kan vi reducere
@@ -69,7 +77,7 @@ import Link from "../components/Link.astro";
         Problemet med digitalt skrald
       </h2>
       <div class="lg:grid lg:grid-cols-2">
-        <p class="text-mørkeblåtekst">
+        <p class="text-mørkeblåtekst lg:ml-44 poppins-regular leading-8">
           Digitalt skrald er skjult forurening, der bruger energi, selv når
           filer og apps ikke er i brug. Det gør vores enheder langsommere og
           belaster miljøet. <br />
@@ -78,12 +86,12 @@ import Link from "../components/Link.astro";
           bæredygtig digital fremtid.
         </p>
         <img
-          class="size-3/6 grid justify-items-center py-6 lg:size-4/6"
+          class="size-3/6 grid justify-items-center py-6 lg:size-4/6 mx-auto"
           src="/src/assets/images/problem.svg"
           alt=""
         />
       </div>
-      <p class="text-center">
+      <p class="text-center poppins-regular leading-8">
         Der er brug for hjælp til at komme af med digitalt skrald. Hjælp
         allerede til i dag!
       </p>
@@ -93,7 +101,7 @@ import Link from "../components/Link.astro";
     </section>
     <section class="sektion_3 bg-rødorange p-12">
       <h2 class="text-mørkerødtekst text-center text-3xl pb-2">Vidste du?</h2>
-      <div class="lg:grid lg:grid-cols-3 pt-10">
+      <div class="lg:grid lg:grid-cols-3 pt-10 poppins-regular leading-8">
         <div class="lg:col-span-2 lg:pr-32">
           <ul class="list-disc pb-10">
             <li class="py-4">
@@ -190,8 +198,16 @@ import Link from "../components/Link.astro";
         Der er brug for hjælp til at komme af med digitalt skrald. Hjælp
         allerede til i dag!
       </p>
-      <div class="text-center">
-        <Buttonmobile>Meld dig til nu!</Buttonmobile>
+
+      <div class="grid justify-items-center pb-10 poppins-regular">
+        <Buttonmobile>
+          <span>Meld dig til nu!</span>
+          <img
+            src="/src/assets/images/SVG/pilicon.svg"
+            alt=""
+            class="w-6 h-6"
+          />
+        </Buttonmobile>
       </div>
     </section>
   </article>
