@@ -4,7 +4,7 @@ import Link from "../components/Link.astro";
 
 <div
   x-data="{ showmenu: false }"
-  class="p-4 fixed lg:static w-full bg-blå800 text-rødorange"
+  class="p-4 fixed lg:static w-full md:bg-blå800 text-white"
 >
   <div id="navbar" class="flex flex-row justify-between p-4">
     <div id="logo" class="">
@@ -15,10 +15,14 @@ import Link from "../components/Link.astro";
         <li class="py-2">
           <Link href="/">Forside</Link>
         </li><!-- alternativt: lav et <a href="">Link</a>, hvis du ikke vil bruge Link.astro komponenten -->
-        <li class="p-2"><Link href="/howto">Sådan gør du</Link></li>
-        <li class="p-2"><Link href="/ressourcer">Ressourcer</Link></li>
-        <li class="bg-rødorange text-lyseblå p-2 rounded-xl">
-          <Link href="#koeb_bogen">Join her!</Link>
+        <li class="p-2">
+          <Link href="/howto">Sådan gør du</Link>
+        </li>
+        <li class="p-2 poppins-regular">
+          <Link href="/ressourcer">Ressourcer</Link>
+        </li>
+        <li class="bg-rødorange text-lyseblå p-2 rounded-xl poppins-regular">
+          <Link href="">Join her!</Link>
         </li>
       </ul>
     </nav>
@@ -40,26 +44,32 @@ import Link from "../components/Link.astro";
   </div>
   <nav
     id="mobilmenu"
-    class="flex flex-col content-center"
+    class="flex flex-col content-center bg-blå800"
     x-show="showmenu"
     x-transition
     x-on:click="showmenu = false"
     x-on:click.outside="showmenu = false"
   >
     <ul>
-      <li class="py-2">
+      <li
+        class="py-2 poppins-regular text-lg pl-4 text-lyseblå hover:poppins-bold"
+      >
         <Link href="/">Forside</Link>
       </li>
-      <li class="py-2">
+      <li
+        class="py-2 poppins-regular text-lg pl-4 text-lyseblå hover:poppins-bold"
+      >
         <Link href="/howto">Sådan gør du</Link>
       </li>
-      <li class="py-2">
+      <li
+        class="py-2 poppins-regular text-lg pl-4 text-lyseblå hover:poppins-bold"
+      >
         <Link href="/ressourcer">Ressourcer</Link>
       </li>
       <li
-        class="text-center py-2 bg-rødorange text-lyseblå rounded-xl m-8 mx-44"
+        class="text-center poppins-regular py-2 bg-rødorange text-lyseblå rounded-xl m-8 mx-44"
       >
-        <Link href="">Join her!</Link>
+        <Link class="poppins-regular" href="">Join her!</Link>
       </li>
     </ul>
   </nav>
