@@ -1,5 +1,76 @@
 ---
+import Link from "../components/Link.astro";
 ---
-<div>
-Header - tilføj navigation mm.
+
+<div
+  x-data="{ showmenu: false }"
+  class="p-4 fixed lg:static w-full md:bg-blå800 text-white"
+>
+  <div id="navbar" class="flex flex-row justify-between p-4">
+    <div id="logo" class="">
+      <a href="/"> <img src="/src/assets/images/logo.svg" alt="logo" /></a>
+    </div>
+    <nav id="desktopmenu" class="hidden lg:block">
+      <ul class="flex flex-row gap-4">
+        <li class="py-2">
+          <Link href="/">Forside</Link>
+        </li><!-- alternativt: lav et <a href="">Link</a>, hvis du ikke vil bruge Link.astro komponenten -->
+        <li class="p-2">
+          <Link href="/howto">Sådan gør du</Link>
+        </li>
+        <li class="p-2 poppins-regular">
+          <Link href="/ressourcer">Ressourcer</Link>
+        </li>
+        <li class="bg-rødorange text-lyseblå p-2 rounded-xl poppins-regular">
+          <Link href="">Join her!</Link>
+        </li>
+      </ul>
+    </nav>
+    <button id="burgermenu" class="lg:hidden" x-on:click="showmenu = ! showmenu"
+      ><svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="size-6"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+      </svg>
+    </button>
+  </div>
+  <nav
+    id="mobilmenu"
+    class="flex flex-col content-center bg-blå800"
+    x-show="showmenu"
+    x-transition
+    x-on:click="showmenu = false"
+    x-on:click.outside="showmenu = false"
+  >
+    <ul>
+      <li
+        class="py-2 poppins-regular text-lg pl-4 text-lyseblå hover:poppins-bold"
+      >
+        <Link href="/">Forside</Link>
+      </li>
+      <li
+        class="py-2 poppins-regular text-lg pl-4 text-lyseblå hover:poppins-bold"
+      >
+        <Link href="/howto">Sådan gør du</Link>
+      </li>
+      <li
+        class="py-2 poppins-regular text-lg pl-4 text-lyseblå hover:poppins-bold"
+      >
+        <Link href="/ressourcer">Ressourcer</Link>
+      </li>
+      <li
+        class="text-center poppins-regular py-2 bg-rødorange text-lyseblå rounded-xl m-8 mx-44"
+      >
+        <Link class="poppins-regular" href="">Join her!</Link>
+      </li>
+    </ul>
+  </nav>
 </div>
