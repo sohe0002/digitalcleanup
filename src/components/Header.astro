@@ -1,14 +1,18 @@
 ---
 import Link from "../components/Link.astro";
+import Image from "astro/components/Image.astro";
+import logo from "../assets/images/logo.svg";
 ---
 
 <div
   x-data="{ showmenu: false }"
-  class="p-4 fixed lg:static w-full bg-blå800 md:bg-blå800 text-white">
-
+  class="p-4 fixed lg:static w-full bg-blå800 md:bg-blå800 text-white"
+>
   <div id="navbar" class="flex flex-row justify-between p-4">
     <div id="logo" class="">
-      <a href="/"> <img src="/src/assets/images/logo.svg" alt="logo" /></a>
+      <a href="/">
+        <Image src={logo} alt="logo" />
+      </a>
     </div>
     <nav id="desktopmenu" class="hidden lg:block">
       <ul class="flex flex-row gap-4 poppins-regular">

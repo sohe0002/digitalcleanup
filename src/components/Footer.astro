@@ -1,5 +1,14 @@
 ---
-
+import Image from "astro/components/Image.astro";
+import footer1 from "../assets/images/SVG/footer1.svg";
+import footer2 from "../assets/images/SVG/footer2.svg";
+import footer3 from "../assets/images/SVG/footer3.svg";
+import x from "../assets/images/SVG/x.svg";
+import facebook from "../assets/images/SVG/facebook.svg";
+import linkedin from "../assets/images/SVG/linkedin.svg";
+import instagram from "../assets/images/SVG/instagram.svg";
+import tiktok from "../assets/images/SVG/tiktok.svg";
+import youtube from "../assets/images/SVG/youtube.svg";
 ---
 
 <div class="bg-rødorange">
@@ -11,21 +20,9 @@
     <div
       class="grid grid-cols-3 justify-items-center gap-10 md:gap-20 pt-8 pb-12"
     >
-      <img
-        src="/src/assets/images/SVG/footer1.svg"
-        alt=""
-        class="w-20 h-auto"
-      />
-      <img
-        src="/src/assets/images/SVG/footer2.svg"
-        alt=""
-        class="w-20 h-auto"
-      />
-      <img
-        src="/src/assets/images/SVG/footer3.svg"
-        alt=""
-        class="w-20 h-auto"
-      />
+      <Image src={footer1} alt="mappe" class="w-20 h-auto" />
+      <Image src={footer2} alt="person" class="w-20 h-auto" />
+      <Image src={footer3} alt="klode" class="w-20 h-auto" />
     </div>
   </div>
 
@@ -56,31 +53,28 @@
       <a
         href="https://x.com/i/flow/login?redirect_after_login=%2Fletsdoitworld"
       >
-        <img src="/src/assets/images/SVG/x.svg" alt="x logo" /></a
-      >
+        <Image src={x} alt="x logo" />
+      </a>
 
       <a href="https://www.youtube.com/worldcleanupday">
-        <img src="/src/assets/images/SVG/youtube.svg" alt="youtube logo" />
+        <Image src={youtube} alt="youtube logo" />
       </a>
 
       <a href="https://www.linkedin.com/company/world-cleanup-day-official">
-        <img src="/src/assets/images/SVG/linkedin.svg" alt="linkedin logo" />
+        <Image src={linkedin} alt="linkedin logo" />
       </a>
 
       <a href="https://www.instagram.com/worldcleanupday.global/">
-        <img src="/src/assets/images/SVG/instagram.svg" alt="instagram logo" />
+        <Image src={instagram} alt="instagram logo" />
       </a>
 
-      <a href="https://www.facebook.com/worldcleanupday.global"
-        ><img
-          src="/src/assets/images/SVG/facebook.svg"
-          alt="facebook logo"
-        /></a
-      >
+      <a href="https://www.facebook.com/worldcleanupday.global">
+        <Image src={facebook} alt="facebook logo" />
+      </a>
 
-      <a href="https://www.tiktok.com/@worldcleanupday.global"
-        ><img src="/src/assets/images/SVG/tiktok.svg" alt="tiktok logo" /></a
-      >
+      <a href="https://www.tiktok.com/@worldcleanupday.global">
+        <Image src={tiktok} alt="tiktok logo" />
+      </a>
     </div>
   </div>
 </div>

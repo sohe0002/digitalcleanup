@@ -3,6 +3,17 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Buttondesk from "../components/Buttondesk.astro";
 import Buttonmobile from "../components/Buttonmobile.astro";
 import Link from "../components/Link.astro";
+import Image from "astro/components/Image.astro";
+import howto from "../assets/images/SVG/howto.svg";
+import mobileicon from "../assets/images/SVG/mobileicon.svg";
+import computericon from "../assets/images/SVG/computericon.svg";
+import mailicon from "../assets/images/SVG/mailicon.svg";
+import arrangementicon from "../assets/images/SVG/arrangementicon.svg";
+import art1trin from "../assets/images/SVG/art1trin.svg";
+import art2trin from "../assets/images/SVG/art2trin.svg";
+import art3trin from "../assets/images/SVG/art3trin.svg";
+import art4trin from "../assets/images/SVG/art4trin.svg";
+import pilicon from "../assets/images/SVG/pilicon.svg";
 ---
 
 <MainLayout>
@@ -13,11 +24,7 @@ import Link from "../components/Link.astro";
       Sådan deltager du
     </h1>
     <div class="grid justify-items-center py-8">
-      <img
-        src="/src/assets/images/SVG/howto.svg"
-        alt="billede af en der smider filer på sin computer ud"
-        class="w-72 h-auto md:w-96"
-      />
+      <Image src={howto} alt="" class="w-72 h-auto md:w-96" />
     </div>
 
     <div class="grid md:grid-cols-2 md:gap-2">
@@ -26,11 +33,7 @@ import Link from "../components/Link.astro";
       >
         <Link href="#step1">
           <Buttonmobile>
-            <img
-              src="/src/assets/images/SVG/mobileicon.svg"
-              alt="mobil icon"
-              class="w-6 h-6"
-            />
+            <Image src={mobileicon} alt="mobile icon" class="w-6 h-6" />
             <span>Ryd op på din smartphone</span>
           </Buttonmobile>
         </Link>
@@ -41,11 +44,8 @@ import Link from "../components/Link.astro";
       >
         <Link href="#step2">
           <Buttonmobile>
-            <img
-              src="/src/assets/images/SVG/computericon.svg"
-              alt="computer icon"
-              class="w-6 h-6"
-            />
+            <Image src={computericon} alt="computer icon" class="w-6 h-6" />
+
             <span>Ryd op på din computers harddisk</span>
           </Buttonmobile>
         </Link>
@@ -56,11 +56,7 @@ import Link from "../components/Link.astro";
       >
         <Link href="#step3">
           <Buttonmobile>
-            <img
-              src="/src/assets/images/SVG/mailicon.svg"
-              alt="mail icon"
-              class="w-6 h-6"
-            />
+            <Image src={mailicon} alt="mail icon" class="w-6 h-6" />
             <span>Ryd op på din indbakke</span>
           </Buttonmobile>
         </Link>
@@ -71,8 +67,8 @@ import Link from "../components/Link.astro";
       >
         <Link href="#step4">
           <Buttonmobile>
-            <img
-              src="/src/assets/images/SVG/arrangementicon.svg"
+            <Image
+              src={arrangementicon}
               alt="arrangement icon"
               class="w-6 h-6"
             />
@@ -95,11 +91,7 @@ import Link from "../components/Link.astro";
 
     <div class="md:grid md:grid-cols-3 gap-4">
       <div class="col-span-1 grid justify-center md:pt-16">
-        <img
-          src="/src/assets/images/SVG/art1trin.svg"
-          alt="billede af mobil"
-          class="max-w-full h-auto"
-        />
+        <Image src={art1trin} alt="billede af mobil" class="max-w-full h-aut" />
       </div>
       <div
         class="col-span-2 py-6 px-14 pb-10 text-mørkeblåtekst poppins-regular leading-8"
@@ -139,9 +131,10 @@ import Link from "../components/Link.astro";
       <div
         class="col-span-1 grid justify-items-center md:order-2 pb-4 md:pb-10"
       >
-        <img
-          src="/src/assets/images/SVG/art2trin.svg"
+        <Image
+          src={art2trin}
           alt="billede af computer"
+          class="max-w-full h-aut"
         />
       </div>
       <p
@@ -172,7 +165,7 @@ import Link from "../components/Link.astro";
 
     <div class="md:grid md:grid-cols-3 gap-4">
       <div class="col-span-1 grid justify-items-center md:pb-12">
-        <img src="/src/assets/images/SVG/art3trin.svg" alt="billede af mail" />
+        <Image src={art3trin} alt="billede af mail" class="max-w-full h-aut" />
       </div>
       <p
         class="col-span-2 text-mørkeblåtekst py-6 px-14 pb-10 poppins-regular leading-8"
@@ -204,9 +197,10 @@ import Link from "../components/Link.astro";
       <div
         class="col-span-1 grid justify-items-center md:order-2 pb-4 md:pt-12 md:pb-10"
       >
-        <img
-          src="/src/assets/images/SVG/art4trin.svg"
+        <Image
+          src={art4trin}
           alt="billede af arrangement"
+          class="max-w-full h-aut"
         />
       </div>
       <p
@@ -235,11 +229,7 @@ import Link from "../components/Link.astro";
     <div class="grid justify-items-center pb-10 poppins-regular">
       <Buttonmobile>
         <span>Del dine resultater</span>
-        <img
-          src="/src/assets/images/SVG/pilicon.svg"
-          alt="arrangement icon"
-          class="w-6 h-6"
-        />
+        <Image src={pilicon} alt="pil icon" class="w-6 h-6" />
       </Buttonmobile>
     </div>
   </section>
