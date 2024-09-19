@@ -1,0 +1,36 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Buttondesk from "../components/Buttondesk.astro";
+import Buttonmobile from "../components/Buttonmobile.astro";
+import Link from "../components/Link.astro";
+---
+<MainLayout title="Deltag her">
+    <section id="formular" class="bg-blå800 text-base lg:text-xl text-stone-900 max-w-m">
+			
+			<form name="koeb_bog" method="post" class="grid grid-cols-1 gap-2 max-w-md mx-auto" data-netlify="true">
+				<h3 class="text-base lg:text-xl text-stone-900 font-bold mb-6 lg:mb-18">Deltag nu</h3>
+
+				<label for="navn">Navn:</label>
+				<input type="text" id="navn" name="navn" placeholder="Navn" class="mb-2 rounded border-stone-300
+				shadow-sm focus:border-red-300 focus:ring focus:ring-red-200/50"></input>
+
+				<label for="text">Adresse:</label>
+				<input type="text" id="text" name="adresse" placeholder="Adresse" class="mb-2 rounded border-stone-300
+				shadow-sm focus:border-red-300 focus:ring focus:ring-red-200/50"></input>
+
+				<label for="email">Email:</label>
+				<input type="email" id="email" name="email" placeholder="E-mail" class="mb-2 rounded border-stone-300
+				shadow-sm focus:border-red-300 focus:ring focus:ring-red-200/50"></input>
+
+				<div class="flex gap-4 items-center mb-4">
+				<input type="checkbox" id="nyhedsbrev" name="nyhedsbrev" class="ml-2 rounded border-stone-300 shadow-sm
+					focus:border-red-300 focus:ring focus:ring-red-200/50 hover:bg-red-300 focus:bg-red-700 checked:bg-red-700"></input>
+				<label for="nyhedsbrev">Hold dig opdateret vha. vores nyhedsbrev!</label>
+				</div>
+				
+				<div class="my-8 lg:flex lg:justify-end">
+				<Buttondesk variant="primary" size="small"><input type="submit" value="Deltag!"></Buttondesk>
+				</div>
+			</form>
+		</section>
+</MainLayout>
