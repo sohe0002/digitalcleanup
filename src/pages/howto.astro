@@ -24,7 +24,11 @@ import pilicon from "../assets/images/SVG/pilicon.svg";
       Sådan deltager du
     </h1>
     <div class="grid justify-items-center py-8">
-      <Image src={howto} alt="" class="w-72 h-auto md:w-96" />
+      <Image
+        src={howto}
+        alt=""
+        class="w-72 h-auto md:w-96 animate__animated hover:drop-shadow-2xl"
+      />
     </div>
 
     <div class="grid md:grid-cols-2 md:gap-2">
@@ -89,7 +93,7 @@ import pilicon from "../assets/images/SVG/pilicon.svg";
       Ryd op i din smartphone
     </h3>
 
-    <div class="md:grid md:grid-cols-3 gap-4">
+    <div class="md:grid md:grid-cols-3 gap-4" id="trin1">
       <div class="col-span-1 grid justify-center md:pt-16">
         <Image src={art1trin} alt="billede af mobil" class="max-w-full h-aut" />
       </div>
@@ -127,7 +131,7 @@ import pilicon from "../assets/images/SVG/pilicon.svg";
       Ryd op i din computers harddisk
     </h3>
 
-    <div class="md:grid md:grid-cols-3 gap-4">
+    <div class="md:grid md:grid-cols-3 gap-4" id="trin2">
       <div
         class="col-span-1 grid justify-items-center md:order-2 pb-4 md:pb-10"
       >
@@ -163,7 +167,7 @@ import pilicon from "../assets/images/SVG/pilicon.svg";
       Ryd op i din indbakke
     </h3>
 
-    <div class="md:grid md:grid-cols-3 gap-4">
+    <div class="md:grid md:grid-cols-3 gap-4" id="trin3">
       <div class="col-span-1 grid justify-items-center md:pb-12">
         <Image src={art3trin} alt="billede af mail" class="max-w-full h-aut" />
       </div>
@@ -193,7 +197,7 @@ import pilicon from "../assets/images/SVG/pilicon.svg";
       Lav nye arrangementer
     </h3>
 
-    <div class="md:grid md:grid-cols-3 gap-4">
+    <div class="md:grid md:grid-cols-3 gap-4" id="trin4">
       <div
         class="col-span-1 grid justify-items-center md:order-2 pb-4 md:pt-12 md:pb-10"
       >
@@ -233,4 +237,52 @@ import pilicon from "../assets/images/SVG/pilicon.svg";
       </Buttonmobile>
     </div>
   </section>
+
+  <script>
+    import { inView } from "motion";
+
+    // <-- inview trin2 -->
+    const trin1Fadeup = document.querySelector("#trin1");
+
+    inView(trin1Fadeup, () => {
+      trin1Fadeup.classList.add(
+        "animate__animated",
+        "animate__fadeInUpBig",
+        "animate__slow"
+      );
+    });
+
+    // <-- inview trin2 -->
+    const trin2Fadeup = document.querySelector("#trin2");
+
+    inView(trin2Fadeup, () => {
+      trin2Fadeup.classList.add(
+        "animate__animated",
+        "animate__slideInRight",
+        "animate__slow"
+      );
+    });
+
+    // <-- inview trin3 -->
+    const trin3Fadeup = document.querySelector("#trin3");
+
+    inView(trin3Fadeup, () => {
+      trin3Fadeup.classList.add(
+        "animate__animated",
+        "animate__bounceInLeft",
+        "animate__slow"
+      );
+    });
+
+    // <-- inview trin4 -->
+    const trin4Fadeup = document.querySelector("#trin4");
+
+    inView(trin4Fadeup, () => {
+      trin4Fadeup.classList.add(
+        "animate__animated",
+        "animate__backInUp",
+        "animate__slow"
+      );
+    });
+  </script>
 </MainLayout>

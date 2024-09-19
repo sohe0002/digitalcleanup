@@ -12,6 +12,7 @@ import digitalskrald from "../assets/images/hvader_digitalskrald.svg";
 import problem from "../assets/images/problem.svg";
 import kilder from "../assets/images/kilder.svg";
 import pilicon from "../assets/images/SVG/pilicon.svg";
+import "motion";
 ---
 
 <MainLayout title="Titel">
@@ -73,20 +74,20 @@ import pilicon from "../assets/images/SVG/pilicon.svg";
             </div>
           </div>
         </section>
-        <section>
+        <section id="intro">
           <Image
             src={digitalskrald}
             alt=""
-            class="size:1/5 pt-10 lg:size-3/5 lg:grid lg:mx-auto"
+            class="size:1/5 pt-10 lg:size-3/5 lg:grid lg:mx-auto animate__animated hover:scale-105"
           />
 
           <h2
-            class="text-mørkerødtekst text-center text-3xl pb-6 pt-14 lg:text-left lg:mx-60"
+            class="text-mørkerødtekst text-center text-3xl pb-6 pt-14 lg:text-left lg:mx-60 animate__animated animate__fadeInUpBig delay-100 duration-500"
           >
             Hvad er digitalt skrald?
           </h2>
           <p
-            class="text-mørkerødtekst lg:w-1/2 lg:mx-60 poppins-regular leading-8"
+            class="text-mørkerødtekst lg:w-1/2 lg:mx-60 poppins-regular leading-8 animate__animated animate__fadeInUpBig"
           >
             Digitalt skrald er unødvendige data som gamle e-mails, filer og
             apps, der optager plads og kræver energi til lagring. Det bidrager
@@ -118,7 +119,7 @@ import pilicon from "../assets/images/SVG/pilicon.svg";
           <Image
             src={problem}
             alt=""
-            class="w-1/2 lg:w-1/5 h-auto mx-auto lg:mr-60 lg:pl-"
+            class="w-1/2 lg:w-1/5 h-auto mx-auto lg:mr-60 lg:pl- animate__animated hover:drop-shadow-2xl"
           />
         </div>
         <div class="text-center">
@@ -133,7 +134,10 @@ import pilicon from "../assets/images/SVG/pilicon.svg";
       </section>
       <section class="sektion_3 bg-rødorange p-12">
         <h2 class="text-mørkerødtekst text-center text-3xl pb-2">Vidste du?</h2>
-        <div class="lg:grid lg:grid-cols-3 pt-10 poppins-regular leading-8">
+        <div
+          class="lg:grid lg:grid-cols-3 pt-10 poppins-regular leading-8"
+          id="vidstedu"
+        >
           <div class="lg:col-span-2 lg:pr-32">
             <ul class="list-disc pb-10">
               <li class="py-4">
@@ -221,7 +225,7 @@ import pilicon from "../assets/images/SVG/pilicon.svg";
             </p>
           </div>
           <div class="lg:size-4/5 hidden lg:block">
-            <Image src={kilder} alt="" />
+            <Image src={kilder} alt="" class="hover:scale-105" />
           </div>
         </div>
       </section>
@@ -240,4 +244,30 @@ import pilicon from "../assets/images/SVG/pilicon.svg";
       </section>
     </section>
   </article>
+
+  <script>
+    import { inView } from "motion";
+
+    // <-- inview intro -->
+    const introFadeup = document.querySelector("#intro");
+
+    inView(introFadeup, () => {
+      introFadeup.classList.add(
+        "animate__animated",
+        "animate__fadeInUpBig",
+        "animate__slow"
+      );
+    });
+
+    // <-- inview vidstsedu -->
+    const vidsteduFadeup = document.querySelector("#vidstedu");
+
+    inView(vidsteduFadeup, () => {
+      vidsteduFadeup.classList.add(
+        "animate__animated",
+        "animate__fadeInUpBig",
+        "animate__slow"
+      );
+    });
+  </script>
 </MainLayout>
