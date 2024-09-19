@@ -4,16 +4,24 @@ import Buttondesk from "../components/Buttondesk.astro";
 import Buttonmobile from "../components/Buttonmobile.astro";
 import Link from "../components/Link.astro";
 import Image from "astro/components/Image.astro";
+import hero from "../assets/images/SVG/hero.svg";
+import arrow from "../assets/images/SVG/arrow.svg";
+import kalender from "../assets/images/SVG/kalender.svg";
+import del from "../assets/images/SVG/del.svg";
+import digitalskrald from "../assets/images/hvader_digitalskrald.svg";
+import problem from "../assets/images/problem.svg";
+import kilder from "../assets/images/kilder.svg";
+import pilicon from "../assets/images/SVG/pilicon.svg";
 ---
 
 <MainLayout title="Titel">
   <article class="poppins-regular">
     <section class="hero_unit bg-blå800">
       <div class="">
-        <img
+        <Image
+          src={hero}
+          alt=""
           class="bg-no-repeat bg-center object-cover h-screen w-full lg:w-screen lg:object-cover min-w-[300px] -z-1 pt-32 lg:pt-0"
-          src="public/hero.svg"
-          alt="billede af skrald fra computer der bliver smidt ud"
         />
 
         <div>
@@ -35,7 +43,7 @@ import Image from "astro/components/Image.astro";
         <div
           class="absolute left-1/2 top-[82%] lg:top-[108%] transform -translate-x-1/2 -translate-y-1/2 hidden lg:block"
         >
-          <img src="src/assets/images/SVG/arrow.svg" alt="arrow" />
+          <Image src={arrow} alt="" />
         </div>
       </div>
 
@@ -52,27 +60,26 @@ import Image from "astro/components/Image.astro";
           <div class="lg:flex lg:justify-center lg:py-6">
             <div class="p-2 lg:text-xl lg:mx-4">
               <Buttondesk>
-                <img
-                  src="src/assets/images/SVG/kalender.svg"
-                  alt="gem datoen"
-                />
+                <Image src={kalender} alt="" />
+
                 <span>Gem datoen</span>
               </Buttondesk>
             </div>
             <div class="p-2 lg:text-xl lg:mx-4">
               <Buttondesk>
-                <img src="src/assets/images/SVG/del.svg" alt="del med venner" />
+                <Image src={del} alt="" />
                 <span>Del med venner</span>
               </Buttondesk>
             </div>
           </div>
         </section>
         <section>
-          <img
-            class="size:1/5 pt-10 lg:size-3/5 lg:grid lg:mx-auto"
-            src="src/assets/images/hvader_digitalskrald.svg"
+          <Image
+            src={digitalskrald}
             alt=""
+            class="size:1/5 pt-10 lg:size-3/5 lg:grid lg:mx-auto"
           />
+
           <h2
             class="text-mørkerødtekst text-center text-3xl pb-6 pt-14 lg:text-left lg:mx-60"
           >
@@ -108,11 +115,10 @@ import Image from "astro/components/Image.astro";
               til en mere bæredygtig digital fremtid.
             </p>
           </div>
-
-          <img
-            class="w-1/2 lg:w-1/5 h-auto mx-auto lg:mr-60 lg:pl-"
-            src="src/assets/images/problem.svg"
+          <Image
+            src={problem}
             alt=""
+            class="w-1/2 lg:w-1/5 h-auto mx-auto lg:mr-60 lg:pl-"
           />
         </div>
         <div class="text-center">
@@ -215,7 +221,7 @@ import Image from "astro/components/Image.astro";
             </p>
           </div>
           <div class="lg:size-4/5 hidden lg:block">
-            <img src="src/assets/images/kilder.svg" alt="" />
+            <Image src={kilder} alt="" />
           </div>
         </div>
       </section>
@@ -228,11 +234,7 @@ import Image from "astro/components/Image.astro";
         <div class="grid justify-items-center pb-10 poppins-regular">
           <Buttonmobile>
             <span>Meld dig til nu!</span>
-            <img
-              src="src/assets/images/SVG/pilicon.svg"
-              alt=""
-              class="w-6 h-6"
-            />
+            <Image src={pilicon} alt="" class="w-6 h-6" />
           </Buttonmobile>
         </div>
       </section>
