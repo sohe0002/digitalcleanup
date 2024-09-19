@@ -36,16 +36,16 @@ import Link from "../components/Link.astro";
         </p>
         <div class="lg:flex lg:justify-center lg:py-6">
           <div class="p-2 lg:text-xl lg:mx-4">
-            <Buttonmobile>
+            <Buttondesk>
               <img src="/src/assets/images/SVG/kalender.svg" alt="gem datoen" />
               <span>Gem datoen</span>
-            </Buttonmobile>
+            </Buttondesk>
           </div>
           <div class="p-2 lg:text-xl lg:mx-4">
-            <Buttonmobile>
+            <Buttondesk>
               <img src="/src/assets/images/SVG/del.svg" alt="del med venner" />
               <span>Del med venner</span>
-            </Buttonmobile>
+            </Buttondesk>
           </div>
         </div>
       </section>
@@ -76,27 +76,34 @@ import Link from "../components/Link.astro";
       >
         Problemet med digitalt skrald
       </h2>
+
       <div class="lg:grid lg:grid-cols-2">
-        <p class="text-mørkeblåtekst lg:ml-44 poppins-regular leading-8">
-          Digitalt skrald er skjult forurening, der bruger energi, selv når
-          filer og apps ikke er i brug. Det gør vores enheder langsommere og
-          belaster miljøet. <br />
-          <br />Ved at rydde op regelmæssigt forlænger du dine enheders levetid,
-          får bedre overblik over dit indhold og bidrager samtidig til en mere
-          bæredygtig digital fremtid.
-        </p>
+        <div class="">
+          <p class="text-mørkeblåtekst lg:ml-44 poppins-regular leading-8">
+            Digitalt skrald er skjult forurening, der bruger energi, selv når
+            filer og apps ikke er i brug. Det gør vores enheder langsommere og
+            belaster miljøet. <br />
+            <br />Ved at rydde op regelmæssigt forlænger du dine enheders
+            levetid, får bedre overblik over dit indhold og bidrager samtidig
+            til en mere bæredygtig digital fremtid.
+          </p>
+        </div>
+
         <img
           class="size-3/6 grid justify-items-center py-6 lg:size-4/6 mx-auto"
           src="/src/assets/images/problem.svg"
           alt=""
         />
-      </div>
-      <p class="text-center poppins-regular leading-8">
-        Der er brug for hjælp til at komme af med digitalt skrald. Hjælp
-        allerede til i dag!
-      </p>
-      <div class="text-center py-4 pt-10">
-        <Buttonmobile>Meld dig til nu!</Buttonmobile>
+
+        <div class="lg:ml-44 lg:pt-40 text-center">
+          <p class="poppins-regular leading-8">
+            Der er brug for hjælp til at komme af med digitalt skrald. Hjælp
+            allerede til i dag!
+          </p>
+          <div class="text-center py-4 pt-10 grid lg:justify-items-center">
+            <Buttonmobile>Meld dig til nu!</Buttonmobile>
+          </div>
+        </div>
       </div>
     </section>
     <section class="sektion_3 bg-rødorange p-12">
