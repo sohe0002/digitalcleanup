@@ -8,23 +8,35 @@ import Link from "../components/Link.astro";
 <MainLayout title="Titel">
   <article class="poppins-regular">
     <section class="hero_unit bg-blå800">
-      <img
-        class="bg-no-repeat bg-center object-cover h-screen w-full lg:w-screen lg:object-cover min-w-[300px] -z-1"
-        src="/src/assets/images/SVG/hero.svg"
-        alt="billede af skrald fra computer der bliver smidt ud"
-      />
+      <div class="">
+        <img
+          class="bg-no-repeat bg-center object-cover h-screen w-full lg:w-screen lg:object-cover min-w-[300px] -z-1 pt-32 lg:pt-0"
+          src="/src/assets/images/SVG/hero.svg"
+          alt="billede af skrald fra computer der bliver smidt ud"
+        />
 
-      <h1
-        class="poppins-regular text-blå800 text-2xl lg:text-5xl text-center lg:left-2/4 lg:top-3/4 lg:pt-32 lg:translate-x-[-50%] lg:absolute"
-      >
-        Din digitale oprydning starter her!
-      </h1>
+        <div>
+          <h1
+            class="absolute poppins-regular text-blå800 text-2xl lg:text-4xl text-center left-1/2 top-[75%] lg:top-[80%] transform -translate-x-1/2 -translate-y-1/2"
+          >
+            Din digitale oprydning starter her!
+          </h1>
 
-      <Buttonmobile
-        class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 mt-8"
-      >
-        <Buttonmobile> Meld dig til nu! </Buttonmobile>
-      </Buttonmobile>
+          <div
+            class="absolute left-1/2 top-[82%] lg:top-[85%] transform -translate-x-1/2 -translate-y-1/2 mt-8"
+          >
+            <Buttonmobile>
+              <span> Meld dig til nu! </span>
+            </Buttonmobile>
+          </div>
+        </div>
+
+        <div
+          class="absolute left-1/2 top-[82%] lg:top-[108%] transform -translate-x-1/2 -translate-y-1/2 hidden lg:block"
+        >
+          <img src="/src/assets/images/SVG/arrow.svg" alt="arrow" />
+        </div>
+      </div>
 
       <section class="sektion_1 bg-rødorange p-12">
         <section
