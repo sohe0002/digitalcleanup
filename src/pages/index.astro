@@ -9,23 +9,24 @@ import Link from "../components/Link.astro";
   <article class="poppins-regular">
     <section class="hero_unit relative bg-blå800">
       <img
-        class="bg-no-repeat bg-center bg-cover h-screen lg:size-fit lg:w-screen lg:object-cover"
+        class="bg-no-repeat bg-center object-cover h-screen w-full lg:w-screen lg:object-cover min-w-[300px] -z-1"
         src="/src/assets/images/SVG/hero.svg"
         alt="billede af skrald fra computer der bliver smidt ud"
       />
 
       <h1
-        class="poppins-regular absolute text-white text-2xl lg:text-5xl top-3/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+        class="poppins-regular absolute text-center text-white text-2xl lg:text-5xl top-3/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"
       >
         Din digitale oprydning starter her!
       </h1>
 
-      <Buttonmobile
-        class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 mt-8"
+      <div
+        class="z-20 top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
       >
-        Meld dig til nu!
-      </Buttonmobile>
+        <Buttonmobile> Meld dig til nu! </Buttonmobile>
+      </div>
     </section>
+
     <section class="sektion_1 bg-rødorange p-12">
       <section
         class="bg-white m-10 p-8 text-center rounded-xl lg:py-16 lg:mx-44"
@@ -56,12 +57,12 @@ import Link from "../components/Link.astro";
           alt=""
         />
         <h2
-          class="text-mørkerødtekst text-center text-3xl pb-6 pt-14 lg:text-left lg:mx-44"
+          class="text-mørkerødtekst text-center text-3xl pb-6 pt-14 lg:text-left lg:mx-60"
         >
           Hvad er digitalt skrald?
         </h2>
         <p
-          class="text-mørkerødtekst lg:w-1/2 lg:mx-44 poppins-regular leading-8"
+          class="text-mørkerødtekst lg:w-1/2 lg:mx-60 poppins-regular leading-8"
         >
           Digitalt skrald er unødvendige data som gamle e-mails, filer og apps,
           der optager plads og kræver energi til lagring. Det bidrager til
@@ -72,14 +73,16 @@ import Link from "../components/Link.astro";
     </section>
     <section class="sektion_2 bg-lyseblå p-12">
       <h2
-        class="text-mørkeblåtekst text-center text-3xl pb-6 lg:text-left lg:mx-44 lg:pt-8"
+        class="text-mørkeblåtekst text-center text-3xl pb-6 lg:text-left lg:mx-60 lg:pt-8"
       >
         Problemet med digitalt skrald
       </h2>
 
-      <div class="lg:grid lg:grid-cols-2">
-        <div class="">
-          <p class="text-mørkeblåtekst lg:ml-44 poppins-regular leading-8">
+      <div class="lg:flex lg:flex-row lg:pt-2">
+        <div class="flex-1">
+          <p
+            class="text-mørkeblåtekst lg:ml-60 poppins-regular leading-8 pb-10 lg:pr-32"
+          >
             Digitalt skrald er skjult forurening, der bruger energi, selv når
             filer og apps ikke er i brug. Det gør vores enheder langsommere og
             belaster miljøet. <br />
@@ -90,19 +93,18 @@ import Link from "../components/Link.astro";
         </div>
 
         <img
-          class="size-3/6 grid justify-items-center py-6 lg:size-4/6 mx-auto"
+          class="w-1/2 lg:w-1/5 h-auto mx-auto lg:mr-60 lg:pl-"
           src="/src/assets/images/problem.svg"
           alt=""
         />
-
-        <div class="lg:ml-44 lg:pt-40 text-center">
-          <p class="poppins-regular leading-8">
-            Der er brug for hjælp til at komme af med digitalt skrald. Hjælp
-            allerede til i dag!
-          </p>
-          <div class="text-center py-4 pt-10 grid lg:justify-items-center">
-            <Buttonmobile>Meld dig til nu!</Buttonmobile>
-          </div>
+      </div>
+      <div class="text-center">
+        <p class="poppins-regular leading-8 pt-10 lg:pt-16">
+          Der er brug for hjælp til at komme af med digitalt skrald. Hjælp
+          allerede til i dag!
+        </p>
+        <div class="text-center py-4 pt-10 grid lg:justify-items-center">
+          <Buttonmobile>Meld dig til nu!</Buttonmobile>
         </div>
       </div>
     </section>
