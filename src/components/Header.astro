@@ -4,25 +4,25 @@ import Link from "../components/Link.astro";
 
 <div
   x-data="{ showmenu: false }"
-  class="p-4 fixed lg:static w-full md:bg-blå800 text-white"
->
+  class="p-4 fixed lg:static w-full bg-blå800 md:bg-blå800 text-white">
+
   <div id="navbar" class="flex flex-row justify-between p-4">
     <div id="logo" class="">
       <a href="/"> <img src="/src/assets/images/logo.svg" alt="logo" /></a>
     </div>
     <nav id="desktopmenu" class="hidden lg:block">
-      <ul class="flex flex-row gap-4">
+      <ul class="flex flex-row gap-4 poppins-regular">
         <li class="py-2">
           <Link href="/">Forside</Link>
         </li><!-- alternativt: lav et <a href="">Link</a>, hvis du ikke vil bruge Link.astro komponenten -->
         <li class="p-2">
           <Link href="/howto">Sådan gør du</Link>
         </li>
-        <li class="p-2 poppins-regular">
+        <li class="p-2">
           <Link href="/ressourcer">Ressourcer</Link>
         </li>
         <li class="bg-rødorange text-lyseblå p-2 rounded-xl poppins-regular">
-          <Link href="">Join her!</Link>
+          <Link href="/form">Join her!</Link>
         </li>
       </ul>
     </nav>
@@ -44,7 +44,7 @@ import Link from "../components/Link.astro";
   </div>
   <nav
     id="mobilmenu"
-    class="flex flex-col content-center bg-blå800"
+    class="flex flex-col content-center"
     x-show="showmenu"
     x-transition
     x-on:click="showmenu = false"
@@ -67,9 +67,9 @@ import Link from "../components/Link.astro";
         <Link href="/ressourcer">Ressourcer</Link>
       </li>
       <li
-        class="text-center poppins-regular py-2 bg-rødorange text-lyseblå rounded-xl m-8 mx-44"
+        class="text-center poppins-regular py-2 bg-rødorange text-lyseblå rounded-xl m-8 mx-50"
       >
-        <Link class="poppins-regular" href="">Join her!</Link>
+        <Link class="poppins-regular" href="/form">Join her!</Link>
       </li>
     </ul>
   </nav>
