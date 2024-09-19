@@ -2,35 +2,77 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Buttondesk from "../components/Buttondesk.astro";
 import Buttonmobile from "../components/Buttonmobile.astro";
-import Link from "../components/Link.astro";
+import { Image } from 'astro:assets';
+import bidragsvg from "../assets/images/bidragsvg.svg";
+import pilicon from "../assets/images/SVG/pilicon.svg";
 ---
-<MainLayout title="Deltag her">
-    <section id="formular" class="bg-blå800 text-base lg:text-xl text-stone-900 max-w-m">
-			
-			<form name="koeb_bog" method="post" class="grid grid-cols-1 gap-2 max-w-md mx-auto" data-netlify="true">
-				<h3 class="text-base lg:text-xl text-stone-900 font-bold mb-6 lg:mb-18">Deltag nu</h3>
+<MainLayout title="Registrér">
+	<article class="bg-blå800 px-[36px] lg:px-[48px] poppins-regular leading-8">
+		<section class="flex flex-col items-center">
+			<h1 class="pt-32 pb-[20px] lg:pb-[80px] text-lyseblå w-[358px] text-3xl lg:text-5xl text-center h-[42px] lg:w-auto">Registrér dit bidrag</h1>
+		</section>
 
-				<label for="navn">Navn:</label>
-				<input type="text" id="navn" name="navn" placeholder="Navn" class="mb-2 rounded border-stone-300
-				shadow-sm focus:border-red-300 focus:ring focus:ring-red-200/50"></input>
+	
+    	<section id="formular" class="text-mørkerødtekst pt-[28px] lg:grid lg:grid-cols-2 lg:items-center lg:justify-center">
+			<Image src={bidragsvg} alt="To hænder der næsten giver highfive" class="pt-[45px] pb-[40px] lg:pt-0 w-[358px] h-[265px] lg:h-[646px] mx-auto lg:place-self-center lg:w-9/12"/>
 
-				<label for="text">Adresse:</label>
-				<input type="text" id="text" name="adresse" placeholder="Adresse" class="mb-2 rounded border-stone-300
-				shadow-sm focus:border-red-300 focus:ring focus:ring-red-200/50"></input>
+			<form name="registrer" method="post" class="grid grid-cols-1 gap-2 max-w-md mx-auto" data-netlify="true">
 
-				<label for="email">Email:</label>
-				<input type="email" id="email" name="email" placeholder="E-mail" class="mb-2 rounded border-stone-300
-				shadow-sm focus:border-red-300 focus:ring focus:ring-red-200/50"></input>
+				<label for="fornavn"></label>
+				<input type="text" id="fornavn" name="fornavn" placeholder="Fornavn" class="mb-[8px] rounded-xl bg-lyseblå h-[53px] border-blå700
+				shadow-sm focus:border-rødorange focus:ring focus:ring-rødorange/50"></input>
 
-				<div class="flex gap-4 items-center mb-4">
-				<input type="checkbox" id="nyhedsbrev" name="nyhedsbrev" class="ml-2 rounded border-stone-300 shadow-sm
-					focus:border-red-300 focus:ring focus:ring-red-200/50 hover:bg-red-300 focus:bg-red-700 checked:bg-red-700"></input>
-				<label for="nyhedsbrev">Hold dig opdateret vha. vores nyhedsbrev!</label>
+				<label for="efternavn"></label>
+				<input type="text" id="efternavn" name="efternavn" placeholder="Efternavn" class="mb-[8px] rounded-xl bg-lyseblå h-[53px] border-blå700
+				shadow-sm focus:border-rødorange focus:ring focus:ring-rødorange/50"></input>
+
+				<label for="email"></label>
+				<input type="email" id="email" name="email" placeholder="Email" class="mb-[8px] rounded-xl bg-lyseblå h-[53px] border-blå700
+				shadow-sm focus:border-rødorange focus:ring focus:ring-rødorange/50"></input>
+
+				<label for="land"></label>
+				<input type="text" id="land" name="land" placeholder="Land" class="mb-[8px] rounded-xl bg-lyseblå h-[53px] border-blå700
+				shadow-sm focus:border-rødorange focus:ring focus:ring-rødorange/50"></input>
+
+				<label for="org"></label>
+				<input type="text" id="org" name="org" placeholder="Organisation navn" class="mb-[8px] rounded-xl bg-lyseblå h-[53px] border-blå700
+				shadow-sm focus:border-rødorange focus:ring focus:ring-rødorange/50"></input>
+
+				<label for="xdeltager"></label>
+				<input type="number" id="xdeltager" name="xdeltager" placeholder="Antal deltagere" class="mb-[8px] rounded-xl bg-lyseblå h-[53px] border-blå700
+				shadow-sm focus:border-rødorange focus:ring focus:ring-rødorange/50"></input>
+
+				<label for="gb"></label>
+				<input type="number" id="gb" name="gb" placeholder="Mængde slettet (i GB)" class="mb-[8px] rounded-xl bg-lyseblå h-[53px] border-blå700
+				shadow-sm focus:border-rødorange focus:ring focus:ring-rødorange/50"></input>
+
+				<div class="pb-[20px]">
+					<div class="pt-[4px] flex gap-4 items-center mb-[16px]">
+					<input type="checkbox" id="vilkaar" name="vilkaar" class="rounded-xl border-blå700 h-6 w-6 shadow-sm
+						focus:border-rødorange focus:ring focus:ring-rødorange/50 hover:bg-red-300 checked:bg-rødorange"></input>
+						<div>
+					<label for="vilkaar" class="text-rødorange">*Jeg accepterer</label>
+					<label for="vilkaar"><a href="https://www.digitalcleanupday.org/terms-conditions" target="_blank"><span class="[text-decoration:underline] text-mørkerød"><br/>Let's Do It, Worlds vilkår og betingelser</span></a></label>
+					</div>
+					</div>
+
+					<div class="pt-[4px] flex gap-4 items-center">
+					<input type="checkbox" id="vilkaar" name="vilkaar" class="rounded-xl border-blå700 h-6 w-6 shadow-sm
+						focus:border-rødorange focus:ring focus:ring-rødorange/50 hover:bg-red-300 checked:bg-rødorange"></input>
+						<div>
+					<label for="vilkaar" class="text-rødorange">Jeg vil gerne tilmelde mig nyheder fra<br/>World Cleanup Day.</label>
+					</div>
+					</div>
 				</div>
-				
-				<div class="my-8 lg:flex lg:justify-end">
-				<Buttondesk variant="primary" size="small"><input type="submit" value="Deltag!"></Buttondesk>
+	
+				<div class="pb-[40px] flex justify-center">
+				<Buttonmobile>
+					<input type="submit" value="Tilmeld mig">
+
+					<Image src={pilicon} alt="To hænder der næsten giver highfive" class="max-w-[24px]"/>
+				</Buttonmobile>
 				</div>
 			</form>
 		</section>
+	</article>
 </MainLayout>
